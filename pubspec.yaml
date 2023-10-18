@@ -1,0 +1,114 @@
+name: marketplace_app
+description: A new Flutter project.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State management
+  flutter_bloc:
+  bloc:
+  bloc_concurrency:
+  equatable:
+
+  # Local storage
+  flutter_secure_storage:
+
+  # Navigator
+  auto_route: ^5.0.4
+
+  # Networking
+  dio:
+  dio_log:
+
+  # Services
+  intl:
+  dartz:
+  rxdart:
+  get_it:
+  url_launcher:
+  package_info_plus: ^4.0.2
+
+  # UI
+  cached_network_image: ^3.2.3
+  flutter_screenutil: ^5.5.3+2
+  flutter_svg: ^1.1.4
+  cupertino_icons: ^1.0.2
+  mask_text_input_formatter: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Runners
+  # dart run build_runner build --delete-conflicting-outputs
+  flutter_gen_runner:
+  auto_route_generator:
+  build_runner:
+
+  # Linter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/l10n/
+    - assets/colors/colors.xml
+    - assets/fonts/inter/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter/Inter-Bold.ttf
+        - asset: assets/fonts/Inter/Inter-Medium.ttf
+        - asset: assets/fonts/Inter/Inter-Regular.ttf
+        - asset: assets/fonts/Inter/Inter-Light.ttf
+
+flutter_intl:
+  enabled: true # Required. Must be set to true to activate the plugin. Default: false
+  class_name: S # Optional. Sets the name for the generated localization class. Default: S
+  main_locale: ru # Optional. Sets the main locale used for generating localization files. Provided value should consist of language code and optional script and country codes separated with underscore (e.g. 'en', 'en_GB', 'zh_Hans', 'zh_Hans_CN'). Default: en
+  arb_dir: assets/l10n # Optional. Sets the directory of your ARB resource files. Provided value should be a valid path on your system. Default: lib/l10n
+  output_dir: lib/src/core/l10n/generated # Optional. Sets the directory of generated localization files. Provided value should be a valid path on your system. Default: lib/generated
+  use_deferred_loading: false # Optional. Must be set to true to generate localization code that is loaded with deferred loading. Default: false
+
+flutter_gen:
+  output: lib/src/core/flutter_gen/generated/ # Optional (default: lib/gen/)
+  line_length: 80 # Optional (default: 80)
+
+  integrations:
+    flutter_svg: true
+    flare_flutter: false
+    rive: false
+
+  assets:
+    enabled: true
+    package_parameter_enabled: false
+    # Assets.imagesChip
+    # style: camel-case
+
+    # Assets.images_chip
+    # style: snake-case
+
+    # Assets.images.chip (default style)
+    # style: dot-delimiter
+
+  fonts:
+    enabled: true
+
+  colors:
+    enabled: true
+    inputs:
+      - assets/colors/colors.xml
+    outputs:
+      package_parameter_enabled: true
+      class_name: AppColors
