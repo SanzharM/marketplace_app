@@ -44,8 +44,8 @@ class AppButton extends StatelessWidget {
     Color newBackgroundColor = backgroundColor ?? context.theme.primaryColor;
     Color newValueColor = color ?? context.theme.scaffoldBackgroundColor;
     if (onPressed == null) {
-      newBackgroundColor = AppColors.lightGrey;
-      newValueColor = AppColors.darkGrey;
+      newBackgroundColor = ColorName.lightGrey;
+      newValueColor = ColorName.darkGrey;
     }
     return CupertinoButton(
       padding: EdgeInsets.zero,

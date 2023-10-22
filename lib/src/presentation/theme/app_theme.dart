@@ -7,76 +7,76 @@ import 'package:marketplace_app/src/presentation/theme/text_theme.dart';
 class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      primaryColor: AppColors.blue,
-      scaffoldBackgroundColor: AppColors.white,
-      hintColor: AppColors.darkGrey,
+      primaryColor: ColorName.blue,
+      scaffoldBackgroundColor: ColorName.white,
+      hintColor: ColorName.darkGrey,
       colorScheme: const ColorScheme.light(
-        primary: AppColors.blue,
-        error: AppColors.red,
-        secondary: AppColors.darkGrey,
-        background: AppColors.white,
+        primary: ColorName.blue,
+        error: ColorName.red,
+        secondary: ColorName.darkGrey,
+        background: ColorName.white,
       ),
 
       // Text
       fontFamily: AppTextTheme.fontFamily,
       textTheme: AppTextTheme.getTextTheme(
-        color: AppColors.black,
+        color: ColorName.black,
       ),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.white,
+        backgroundColor: ColorName.white,
         centerTitle: true,
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
-        titleTextStyle: AppTextTheme.getTextTheme(color: AppColors.black).headlineMedium,
+        titleTextStyle: AppTextTheme.getTextTheme(color: ColorName.black).headlineMedium,
       ),
       cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
-        primaryColor: AppColors.black,
-        scaffoldBackgroundColor: AppColors.white,
+        primaryColor: ColorName.black,
+        scaffoldBackgroundColor: ColorName.white,
         textTheme: CupertinoTextThemeData(
-          primaryColor: AppColors.white,
-          textStyle: AppTextTheme.getTextTheme(color: AppColors.white).bodyLarge,
+          primaryColor: ColorName.white,
+          textStyle: AppTextTheme.getTextTheme(color: ColorName.white).bodyLarge,
         ),
       ),
       textSelectionTheme: const TextSelectionThemeData(
-        cursorColor: AppColors.black,
+        cursorColor: ColorName.black,
       ),
     );
   }
 
   static ThemeData get darkTheme {
     return ThemeData(
-      primaryColor: AppColors.blue,
-      scaffoldBackgroundColor: AppColors.white,
-      hintColor: AppColors.darkGrey,
+      primaryColor: ColorName.blue,
+      scaffoldBackgroundColor: ColorName.white,
+      hintColor: ColorName.darkGrey,
       colorScheme: const ColorScheme.dark(
-        primary: AppColors.blue,
-        error: AppColors.red,
-        secondary: AppColors.lightGrey,
-        background: AppColors.white,
+        primary: ColorName.blue,
+        error: ColorName.red,
+        secondary: ColorName.lightGrey,
+        background: ColorName.white,
       ),
 
       // Text
       fontFamily: AppTextTheme.fontFamily,
       textTheme: AppTextTheme.getTextTheme(
-        color: AppColors.black,
+        color: ColorName.white,
       ),
       appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.white,
+        backgroundColor: ColorName.white,
         centerTitle: true,
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
-        titleTextStyle: AppTextTheme.getTextTheme(color: AppColors.black).headlineMedium,
+        titleTextStyle: AppTextTheme.getTextTheme(color: ColorName.white).headlineMedium,
       ),
       cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
-        primaryColor: AppColors.black,
-        scaffoldBackgroundColor: AppColors.white,
+        primaryColor: ColorName.black,
+        scaffoldBackgroundColor: ColorName.white,
         textTheme: CupertinoTextThemeData(
-          primaryColor: AppColors.white,
-          textStyle: AppTextTheme.getTextTheme(color: AppColors.white).bodyLarge,
+          primaryColor: ColorName.white,
+          textStyle: AppTextTheme.getTextTheme(color: ColorName.white).bodyLarge,
         ),
       ),
       textSelectionTheme: const TextSelectionThemeData(
-        cursorColor: AppColors.black,
+        cursorColor: ColorName.black,
       ),
     );
   }

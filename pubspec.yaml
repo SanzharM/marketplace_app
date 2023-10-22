@@ -40,9 +40,12 @@ dependencies:
   # UI
   cached_network_image: ^3.2.3
   flutter_screenutil: ^5.5.3+2
-  flutter_svg: ^1.1.4
+  flutter_svg:
   cupertino_icons: ^1.0.2
   mask_text_input_formatter: ^2.4.0
+
+  # Assets generators
+  # flutter_gen:
 
 dev_dependencies:
   flutter_test:
@@ -111,4 +114,4 @@ flutter_gen:
       - assets/colors/colors.xml
     outputs:
       package_parameter_enabled: true
-      class_name: AppColors
+      class_name: ColorName

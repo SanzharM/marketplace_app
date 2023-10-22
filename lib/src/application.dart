@@ -4,6 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:marketplace_app/src/core/app_router/app_router.dart';
 import 'package:marketplace_app/src/core/l10n/l10n_service.dart';
 import 'package:marketplace_app/src/core/utils/utils.dart';
+import 'package:marketplace_app/src/presentation/screens/home/bloc/home_bloc.dart';
+import 'package:marketplace_app/src/presentation/screens/nav_bar/bloc/nav_bar_bloc.dart';
+import 'package:marketplace_app/src/presentation/screens/profile/bloc/user_bloc.dart';
 import 'package:marketplace_app/src/presentation/screens/settings/bloc/settings_bloc.dart';
 import 'package:marketplace_app/src/presentation/theme/app_theme.dart';
 import 'package:marketplace_app/src/service_locator.dart';
@@ -45,32 +48,45 @@ class _ApplicationState extends State<Application> {
           lazy: false,
           create: (_) => SettingsBloc()..initial(),
         ),
+        BlocProvider<NavBarBloc>(
+          create: (_) => NavBarBloc(),
+        ),
+        BlocProvider<HomeBloc>(
+          create: (_) => HomeBloc(),
+        ),
+        BlocProvider<UserBloc>(
+          lazy: false,
+          create: (_) => UserBloc(),
+        )
       ],
       child: BlocBuilder<SettingsBloc, SettingsState>(
         builder: (context, state) {
           return ScreenUtilInit(
-            designSize: const Size(872, 365),
+            designSize: const Size(375, 812),
             splitScreenMode: true,
-            child: MaterialApp.router(
-              title: Application.title,
-              debugShowCheckedModeBanner: false,
-              // Routing
-              routeInformationParser: _appRouter.defaultRouteParser(),
-              routerDelegate: _appRouter.delegate(),
-              routeInformationProvider: _appRouter.routeInfoProvider(),
+            minTextAdapt: true,
+            builder: (context, child) {
+              return MaterialApp.router(
+                title: Application.title,
+                debugShowCheckedModeBanner: false,
+                // Routing
+                routeInformationParser: _appRouter.defaultRouteParser(),
+                routerDelegate: _appRouter.delegate(),
+                routeInformationProvider: _appRouter.routeInfoProvider(),
 
-              // Theme
-              theme: AppTheme.lightTheme,
-              darkTheme: AppTheme.darkTheme,
-              themeMode: state.themeMode,
-              themeAnimationCurve: Curves.easeInOut,
-              themeAnimationDuration: Utils.animationDuration,
+                // Theme
+                theme: AppTheme.lightTheme,
+                darkTheme: AppTheme.darkTheme,
+                themeMode: state.themeMode,
+                themeAnimationCurve: Curves.easeInOut,
+                themeAnimationDuration: Utils.animationDuration,
 
-              // Localization
-              locale: state.currentLocale,
-              supportedLocales: L10n.supportedLocales,
-              localizationsDelegates: L10n.delegates,
-            ),
+                // Localization
+                locale: state.currentLocale,
+                supportedLocales: L10n.supportedLocales,
+                localizationsDelegates: L10n.delegates,
+              );
+            },
           );
         },
       ),

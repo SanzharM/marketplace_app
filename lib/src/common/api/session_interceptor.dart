@@ -20,8 +20,8 @@ class SessionInterceptor extends InterceptorsWrapper {
     options.headers['Accept'] = 'application/json';
 
     final token = await const LocalStorage().getToken();
-    if (token?.isNotEmpty ?? false) {
-      options.headers['Authorization'] = 'Bearer $token';
+    if (token?.access?.isNotEmpty ?? false) {
+      options.headers['Authorization'] = token;
     }
 
     final language = await const LocalStorage().getLocale();
@@ -33,11 +33,11 @@ class SessionInterceptor extends InterceptorsWrapper {
   @override
   void onError(DioError err, ErrorInterceptorHandler handler) {
     if (err.response?.statusCode == 401) {
-      const LocalStorage().setToken(null);
+      const LocalStorage().deleteToken();
       try {
-        sl<AppRouter>().replaceAll(const [
-          SplashRoute(),
-        ]);
+        Future.delayed(const Duration(seconds: 2)).then((value) {
+          sl<AppRouter>().replaceAll(const [SplashRoute(), NavBarRoute()]);
+        });
         final context = sl<AppRouter>().navigatorKey.currentContext;
         if (context != null) {
           context.showSnackBar(L10n.current.sessionExpired);

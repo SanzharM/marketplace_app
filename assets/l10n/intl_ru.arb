@@ -23,5 +23,11 @@
     "toCancel": "Отменить",
     "toContinue": "Продолжить",
     "toPay": "Оплатить",
-    "payment": "Оплата"
+    "payment": "Оплата",
+    "@_SCREEN_TITLES": {},
+    "mainTab": "Главная",
+    "cart": "Корзина",
+    "profile": "Профиль",
+    "settings": "Настройки",
+    "orderPayment": "Оплата заказа"
 }

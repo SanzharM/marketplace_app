@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отмена"),
+        "cart": MessageLookupByLibrary.simpleMessage("Корзина"),
         "complete": MessageLookupByLibrary.simpleMessage("Завершить"),
         "done": MessageLookupByLibrary.simpleMessage("Готово"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
@@ -33,14 +34,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Некорректный номер телефона"),
         "kazakh": MessageLookupByLibrary.simpleMessage("Қазақша"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
+        "mainTab": MessageLookupByLibrary.simpleMessage("Главная"),
         "next": MessageLookupByLibrary.simpleMessage("Далее"),
         "no": MessageLookupByLibrary.simpleMessage("Нет"),
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("Нет подключения к Интернету"),
+        "orderPayment": MessageLookupByLibrary.simpleMessage("Оплата заказа"),
         "payment": MessageLookupByLibrary.simpleMessage("Оплата"),
+        "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "russian": MessageLookupByLibrary.simpleMessage("Русский"),
         "sessionExpired":
             MessageLookupByLibrary.simpleMessage("Время сессия истекло"),
+        "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
         "somethingWentWrong":
             MessageLookupByLibrary.simpleMessage("Что-то пошло не так"),
         "toCancel": MessageLookupByLibrary.simpleMessage("Отменить"),

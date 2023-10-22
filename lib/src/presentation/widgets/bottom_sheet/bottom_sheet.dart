@@ -17,8 +17,8 @@ mixin CustomBottomSheetMixin {
       isDismissible: true,
       isScrollControlled: isGrowable,
       constraints: BoxConstraints(
-        minWidth: context.mediaQuery.size.height * 0.3,
-        maxHeight: context.mediaQuery.size.height * 0.87,
+        minWidth: context.sizeOf.height * 0.3,
+        maxHeight: context.sizeOf.height * 0.87,
       ),
       enableDrag: isDragable,
       elevation: 0,

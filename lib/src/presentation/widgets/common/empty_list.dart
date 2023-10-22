@@ -33,7 +33,7 @@ class EmptyListScrollable extends StatelessWidget {
         ),
         padding: EdgeInsets.all(16.w),
         child: Container(
-          height: context.mediaQuery.size.height / 1.5,
+          height: context.sizeOf.height / 1.5,
           width: double.maxFinite,
           alignment: Alignment.center,
           child: Text(

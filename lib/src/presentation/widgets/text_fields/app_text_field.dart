@@ -90,17 +90,17 @@ class AppTextField extends StatelessWidget {
             // BORDERS
             border: withBorder
                 ? const UnderlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.lightGrey),
+                    borderSide: BorderSide(color: ColorName.lightGrey),
                   )
                 : InputBorder.none,
             enabledBorder: withBorder
                 ? const UnderlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.lightGrey),
+                    borderSide: BorderSide(color: ColorName.lightGrey),
                   )
                 : InputBorder.none,
             disabledBorder: withBorder
                 ? const UnderlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.lightGrey),
+                    borderSide: BorderSide(color: ColorName.lightGrey),
                   )
                 : InputBorder.none,
             focusedBorder: withBorder
@@ -127,11 +127,11 @@ class AppTextField extends StatelessWidget {
             hintText: hintText,
             hintMaxLines: maxLines,
             hintStyle: context.theme.textTheme.bodyMedium?.apply(
-              color: hintColor ?? AppColors.darkGrey,
+              color: hintColor ?? ColorName.darkGrey,
             ),
             labelText: labelText,
             labelStyle: context.theme.textTheme.displaySmall?.apply(
-              color: labelColor ?? AppColors.darkGrey,
+              color: labelColor ?? ColorName.darkGrey,
             ),
             contentPadding: EdgeInsets.symmetric(
               vertical: 12.w,

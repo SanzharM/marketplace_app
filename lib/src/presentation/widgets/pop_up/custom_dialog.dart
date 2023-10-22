@@ -61,7 +61,7 @@ mixin CustomDialog {
             children: <Widget>[
               AppButton(
                 title: L10n.of(context).no,
-                backgroundColor: AppColors.transparent,
+                backgroundColor: ColorName.transparent,
                 needBorder: true,
                 borderColor: context.theme.primaryColor,
                 color: context.theme.primaryColor,

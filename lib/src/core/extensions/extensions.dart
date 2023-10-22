@@ -16,7 +16,7 @@ extension XBuildContext on BuildContext {
 
   MediaQueryData get mediaQuery => MediaQuery.of(this);
 
-  Size get size => MediaQuery.sizeOf(this);
+  Size get sizeOf => MediaQuery.sizeOf(this);
 
   FocusScopeNode get focus => FocusScope.of(this);
 
@@ -67,5 +67,17 @@ extension XResponse on Response {
   bool get isSuccess {
     if (statusCode == null) return false;
     return statusCode! >= 200 && statusCode! <= 299;
+  }
+
+  bool get isNotSuccess => !isSuccess;
+
+  bool get isDataMap => data is Map;
+
+  bool get isDataNotMap => data is! Map;
+
+  String? get detail {
+    if (isDataNotMap) return null;
+    if (data['detail'] is! String) return null;
+    return data['detail'] as String;
   }
 }

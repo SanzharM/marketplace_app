@@ -269,6 +269,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Главная`
+  String get mainTab {
+    return Intl.message(
+      'Главная',
+      name: 'mainTab',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Корзина`
+  String get cart {
+    return Intl.message(
+      'Корзина',
+      name: 'cart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Профиль`
+  String get profile {
+    return Intl.message(
+      'Профиль',
+      name: 'profile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Настройки`
+  String get settings {
+    return Intl.message(
+      'Настройки',
+      name: 'settings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Оплата заказа`
+  String get orderPayment {
+    return Intl.message(
+      'Оплата заказа',
+      name: 'orderPayment',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

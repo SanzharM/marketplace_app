@@ -21,7 +21,7 @@ class BottomSheetTag extends StatelessWidget {
           height: 4.h,
           decoration: BoxDecoration(
             borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-            color: color ?? AppColors.lightGrey,
+            color: color ?? ColorName.lightGrey,
           ),
         ),
       ],

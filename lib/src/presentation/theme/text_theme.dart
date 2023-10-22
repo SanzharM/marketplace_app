@@ -10,9 +10,10 @@ class AppTextTheme {
     fontSize: 16.0,
     fontWeight: FontWeight.normal,
     fontFamily: fontFamily,
+    letterSpacing: 0,
   );
 
-  static TextTheme getTextTheme({Color color = AppColors.black}) {
+  static TextTheme getTextTheme({Color color = ColorName.black}) {
     return TextTheme(
       // HEADLINES
       headlineLarge: _primaryTextStyle.copyWith(

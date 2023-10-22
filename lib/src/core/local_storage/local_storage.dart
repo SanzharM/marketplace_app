@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:marketplace_app/src/core/l10n/l10n_service.dart';
+import 'package:marketplace_app/src/domain/entities/authorization/token_entity.dart';
 
 class LocalStorage {
   const LocalStorage();
@@ -9,20 +10,35 @@ class LocalStorage {
 
   FlutterSecureStorage get storage => _storage;
 
-  static const String _tokenKey = 'MarketplaceAppTokenKey';
+  static const String _accessTokenKey = 'MarketplaceAppAccessTokenKey';
+  static const String _refershTokenKey = 'MarketplaceAppRefreshTokenKey';
   static const String _themeModeKey = 'MarketplaceAppThemeModeKey';
   static const String _localeKey = 'MarketplaceAppLocaleKey';
 
   // TOKEN
-  Future<void> setToken(String? token) {
-    if (token?.isEmpty ?? true) {
-      return _storage.delete(key: _tokenKey);
+  Future<void> setToken({String? access, String? refresh}) async {
+    if (access?.isNotEmpty ?? false) {
+      return _storage.write(key: _accessTokenKey, value: access!);
     }
-    return _storage.write(key: _tokenKey, value: token!);
+    if (refresh?.isNotEmpty ?? false) {
+      return _storage.write(key: _refershTokenKey, value: refresh!);
+    }
+    return;
   }
 
-  Future<String?> getToken() async {
-    return await _storage.read(key: _tokenKey);
+  Future<void> deleteToken() async {
+    await _storage.delete(key: _accessTokenKey);
+    await _storage.delete(key: _refershTokenKey);
+    return;
+  }
+
+  Future<TokenEntity?> getToken() async {
+    final String? access = await _storage.read(key: _accessTokenKey);
+    final String? refresh = await _storage.read(key: _refershTokenKey);
+    if (access == null && refresh == null) {
+      return null;
+    }
+    return TokenEntity(access: access, refresh: refresh);
   }
 
   // THEME MODE
