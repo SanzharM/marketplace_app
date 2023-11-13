@@ -7,12 +7,12 @@ class UserState extends Equatable {
     this.message = '',
   });
 
-  final dynamic user;
+  final UserEntity user;
   final StateStatus status;
   final String message;
 
   bool get isAuthorized => user.isAuthorized;
-  bool get isNotAuthorized => user.isNotAuthorized;
+  bool get isNotAuthorized => !isAuthorized;
 
   @override
   List<Object> get props => [user, status, message];
@@ -35,14 +35,14 @@ class UserLogoutSuccessState extends UserState {
 
   const UserLogoutSuccessState({
     required this.loggedOutUser,
-    super.user = const Object(),
+    super.user = const UserEntity(),
     super.status = StateStatus.initial,
   });
 
   factory UserLogoutSuccessState.fromState(UserState state) {
     return UserLogoutSuccessState(
       loggedOutUser: state.user,
-      user: const Object(),
+      user: const UserEntity(),
     );
   }
 }

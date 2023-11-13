@@ -319,6 +319,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Авторизация`
+  String get authorization {
+    return Intl.message(
+      'Авторизация',
+      name: 'authorization',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Войти`
+  String get toLogin {
+    return Intl.message(
+      'Войти',
+      name: 'toLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Войдите в аккаунт, чтобы использовать все возможности приложения`
+  String get needToLoginText {
+    return Intl.message(
+      'Войдите в аккаунт, чтобы использовать все возможности приложения',
+      name: 'needToLoginText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Зарегистрироваться`
+  String get toRegister {
+    return Intl.message(
+      'Зарегистрироваться',
+      name: 'toRegister',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Регистрация`
+  String get registration {
+    return Intl.message(
+      'Регистрация',
+      name: 'registration',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

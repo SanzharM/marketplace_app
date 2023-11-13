@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:marketplace_app/src/common/state_status.dart';
 import 'package:marketplace_app/src/core/l10n/l10n_service.dart';
+import 'package:marketplace_app/src/domain/entities/user/user_entity.dart';
 
 part 'user_event.dart';
 part 'user_state.dart';
@@ -12,7 +13,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   void changeUser(dynamic user) => add(UserChangeEvent(user));
   void logout() => add(UserLogoutEvent());
 
-  UserBloc() : super(const UserState(user: null)) {
+  UserBloc() : super(const UserState(user: UserEntity())) {
     on<UserGetEvent>(_get);
     on<UserChangeEvent>(_change);
     on<UserLogoutEvent>(_logout);

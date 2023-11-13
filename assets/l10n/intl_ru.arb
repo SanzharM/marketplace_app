@@ -29,5 +29,11 @@
     "cart": "Корзина",
     "profile": "Профиль",
     "settings": "Настройки",
-    "orderPayment": "Оплата заказа"
+    "orderPayment": "Оплата заказа",
+    "@_AUTHORIZATION": {},
+    "authorization": "Авторизация",
+    "toLogin": "Войти",
+    "needToLoginText": "Войдите в аккаунт, чтобы использовать все возможности приложения",
+    "toRegister": "Зарегистрироваться",
+    "registration": "Регистрация"
 }

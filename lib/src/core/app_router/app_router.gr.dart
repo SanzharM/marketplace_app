@@ -23,6 +23,23 @@ class _$AppRouter extends RootStackRouter {
         child: const SplashScreen(),
       );
     },
+    ResultRoute.name: (routeData) {
+      final args = routeData.argsAs<ResultRouteArgs>();
+      return CustomPage<dynamic>(
+        routeData: routeData,
+        child: ResultScreen(
+          key: args.key,
+          widget: args.widget,
+          title: args.title,
+          text: args.text,
+          buttonTitle: args.buttonTitle,
+          onPressed: args.onPressed,
+        ),
+        // customRouteBuilder: (context, child, page) => TransitionsBuilders.slideBottom,
+        opaque: true,
+        barrierDismissible: false,
+      );
+    },
     NavBarRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
         routeData: routeData,
@@ -33,6 +50,12 @@ class _$AppRouter extends RootStackRouter {
       return AdaptivePage<dynamic>(
         routeData: routeData,
         child: const HomeScreen(),
+      );
+    },
+    CartRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+        routeData: routeData,
+        child: const CartScreen(),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -53,10 +76,16 @@ class _$AppRouter extends RootStackRouter {
         child: const ProductScreen(),
       );
     },
-    CartRoute.name: (routeData) {
+    LoginRoute.name: (routeData) {
       return AdaptivePage<dynamic>(
         routeData: routeData,
-        child: const CartScreen(),
+        child: WrappedRoute(child: const LoginScreen()),
+      );
+    },
+    RegistrationRoute.name: (routeData) {
+      return AdaptivePage<dynamic>(
+        routeData: routeData,
+        child: WrappedRoute(child: const RegistrationScreen()),
       );
     },
   };
@@ -68,12 +97,20 @@ class _$AppRouter extends RootStackRouter {
           path: '/',
         ),
         RouteConfig(
+          ResultRoute.name,
+          path: '/result-screen',
+        ),
+        RouteConfig(
           NavBarRoute.name,
           path: '/nav-bar-screen',
         ),
         RouteConfig(
           HomeRoute.name,
           path: '/home-screen',
+        ),
+        RouteConfig(
+          CartRoute.name,
+          path: '/cart-screen',
         ),
         RouteConfig(
           ProfileRoute.name,
@@ -88,8 +125,12 @@ class _$AppRouter extends RootStackRouter {
           path: '/product-screen',
         ),
         RouteConfig(
-          CartRoute.name,
-          path: '/cart-screen',
+          LoginRoute.name,
+          path: '/login-screen',
+        ),
+        RouteConfig(
+          RegistrationRoute.name,
+          path: '/registration-screen',
         ),
       ];
 }
@@ -104,6 +145,60 @@ class SplashRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SplashRoute';
+}
+
+/// generated route for
+/// [ResultScreen]
+class ResultRoute extends PageRouteInfo<ResultRouteArgs> {
+  ResultRoute({
+    Key? key,
+    Widget? widget,
+    required String title,
+    String? text,
+    String? buttonTitle,
+    void Function()? onPressed,
+  }) : super(
+          ResultRoute.name,
+          path: '/result-screen',
+          args: ResultRouteArgs(
+            key: key,
+            widget: widget,
+            title: title,
+            text: text,
+            buttonTitle: buttonTitle,
+            onPressed: onPressed,
+          ),
+        );
+
+  static const String name = 'ResultRoute';
+}
+
+class ResultRouteArgs {
+  const ResultRouteArgs({
+    this.key,
+    this.widget,
+    required this.title,
+    this.text,
+    this.buttonTitle,
+    this.onPressed,
+  });
+
+  final Key? key;
+
+  final Widget? widget;
+
+  final String title;
+
+  final String? text;
+
+  final String? buttonTitle;
+
+  final void Function()? onPressed;
+
+  @override
+  String toString() {
+    return 'ResultRouteArgs{key: $key, widget: $widget, title: $title, text: $text, buttonTitle: $buttonTitle, onPressed: $onPressed}';
+  }
 }
 
 /// generated route for
@@ -128,6 +223,18 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+}
+
+/// generated route for
+/// [CartScreen]
+class CartRoute extends PageRouteInfo<void> {
+  const CartRoute()
+      : super(
+          CartRoute.name,
+          path: '/cart-screen',
+        );
+
+  static const String name = 'CartRoute';
 }
 
 /// generated route for
@@ -167,13 +274,25 @@ class ProductRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [CartScreen]
-class CartRoute extends PageRouteInfo<void> {
-  const CartRoute()
+/// [LoginScreen]
+class LoginRoute extends PageRouteInfo<void> {
+  const LoginRoute()
       : super(
-          CartRoute.name,
-          path: '/cart-screen',
+          LoginRoute.name,
+          path: '/login-screen',
         );
 
-  static const String name = 'CartRoute';
+  static const String name = 'LoginRoute';
+}
+
+/// generated route for
+/// [RegistrationScreen]
+class RegistrationRoute extends PageRouteInfo<void> {
+  const RegistrationRoute()
+      : super(
+          RegistrationRoute.name,
+          path: '/registration-screen',
+        );
+
+  static const String name = 'RegistrationRoute';
 }

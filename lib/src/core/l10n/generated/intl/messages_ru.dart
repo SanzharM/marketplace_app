@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "authorization": MessageLookupByLibrary.simpleMessage("Авторизация"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отмена"),
         "cart": MessageLookupByLibrary.simpleMessage("Корзина"),
@@ -35,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "kazakh": MessageLookupByLibrary.simpleMessage("Қазақша"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
         "mainTab": MessageLookupByLibrary.simpleMessage("Главная"),
+        "needToLoginText": MessageLookupByLibrary.simpleMessage(
+            "Войдите в аккаунт, чтобы использовать все возможности приложения"),
         "next": MessageLookupByLibrary.simpleMessage("Далее"),
         "no": MessageLookupByLibrary.simpleMessage("Нет"),
         "noInternetConnection":
@@ -42,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "orderPayment": MessageLookupByLibrary.simpleMessage("Оплата заказа"),
         "payment": MessageLookupByLibrary.simpleMessage("Оплата"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+        "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "russian": MessageLookupByLibrary.simpleMessage("Русский"),
         "sessionExpired":
             MessageLookupByLibrary.simpleMessage("Время сессия истекло"),
@@ -50,7 +54,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Что-то пошло не так"),
         "toCancel": MessageLookupByLibrary.simpleMessage("Отменить"),
         "toContinue": MessageLookupByLibrary.simpleMessage("Продолжить"),
+        "toLogin": MessageLookupByLibrary.simpleMessage("Войти"),
         "toPay": MessageLookupByLibrary.simpleMessage("Оплатить"),
+        "toRegister":
+            MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
         "unableToLoadTheLink":
             MessageLookupByLibrary.simpleMessage("Не удалось открыть ссылку"),
         "yes": MessageLookupByLibrary.simpleMessage("Да")
