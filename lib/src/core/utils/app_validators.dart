@@ -16,4 +16,24 @@ class AppValidators {
     }
     return null;
   }
+
+  static String? passwordValidator(String? value) {
+    if (value?.isEmpty ?? true) {
+      return L10n.current.fillTheField;
+    }
+    if (value!.length < 6) {
+      return L10n.current.incorrectPassword;
+    }
+    return null;
+  }
+
+  static String? emailValidator(String? value) {
+    if (value?.isEmpty ?? true) {
+      return L10n.current.fillTheField;
+    }
+    if (!value!.contains('@')) {
+      return L10n.current.incorrectEmail;
+    }
+    return null;
+  }
 }

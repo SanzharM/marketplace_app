@@ -27,13 +27,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Отмена"),
         "cart": MessageLookupByLibrary.simpleMessage("Корзина"),
         "complete": MessageLookupByLibrary.simpleMessage("Завершить"),
+        "credentialsToFurtherAuthorization":
+            MessageLookupByLibrary.simpleMessage("Данные для авторизации"),
+        "doesNotHaveAccountYet":
+            MessageLookupByLibrary.simpleMessage("Нет аккаунта?"),
         "done": MessageLookupByLibrary.simpleMessage("Готово"),
+        "email": MessageLookupByLibrary.simpleMessage("E-mail"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "error": MessageLookupByLibrary.simpleMessage("Ошибка"),
         "fillTheField": MessageLookupByLibrary.simpleMessage("Заполните поле"),
+        "firstName": MessageLookupByLibrary.simpleMessage("Имя"),
+        "haveAlreadyAccount":
+            MessageLookupByLibrary.simpleMessage("Есть аккаунт?"),
+        "incorrectEmail":
+            MessageLookupByLibrary.simpleMessage("Некорректный e-mail"),
+        "incorrectPassword": MessageLookupByLibrary.simpleMessage(
+            "Минимальная длина пароля - 6 символов"),
         "incorrectPhone":
             MessageLookupByLibrary.simpleMessage("Некорректный номер телефона"),
+        "incorrectUsername": MessageLookupByLibrary.simpleMessage(
+            "Некорректное имя пользователя"),
         "kazakh": MessageLookupByLibrary.simpleMessage("Қазақша"),
+        "lastName": MessageLookupByLibrary.simpleMessage("Фамилия"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
         "mainTab": MessageLookupByLibrary.simpleMessage("Главная"),
         "needToLoginText": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noInternetConnection":
             MessageLookupByLibrary.simpleMessage("Нет подключения к Интернету"),
         "orderPayment": MessageLookupByLibrary.simpleMessage("Оплата заказа"),
+        "password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "payment": MessageLookupByLibrary.simpleMessage("Оплата"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
@@ -60,6 +76,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
         "unableToLoadTheLink":
             MessageLookupByLibrary.simpleMessage("Не удалось открыть ссылку"),
-        "yes": MessageLookupByLibrary.simpleMessage("Да")
+        "username": MessageLookupByLibrary.simpleMessage("Логин"),
+        "whatIsYourName":
+            MessageLookupByLibrary.simpleMessage("Как вас зовут?"),
+        "yes": MessageLookupByLibrary.simpleMessage("Да"),
+        "yourEmailToSendReceipts": MessageLookupByLibrary.simpleMessage(
+            "Ваш e-mail, чтобы отправлять вам чеки об оплате")
       };
 }

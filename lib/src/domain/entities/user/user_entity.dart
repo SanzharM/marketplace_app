@@ -25,7 +25,7 @@ class UserEntity extends Equatable {
     ValueGetter<String?>? avatar,
     ValueGetter<String?>? username,
     ValueGetter<String?>? email,
-    dynamic? city,
+    dynamic city,
     bool? isActive,
     bool? isAuthorized,
   }) {

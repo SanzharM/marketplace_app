@@ -2,8 +2,9 @@ part of 'registration_bloc.dart';
 
 class RegistrationState extends Equatable {
   const RegistrationState({
-    this.login = '',
+    this.username = '',
     this.password = '',
+    this.isPasswordObscured = true,
     this.firstName = '',
     this.lastName = '',
     this.email = '',
@@ -11,8 +12,9 @@ class RegistrationState extends Equatable {
     this.message = '',
   });
 
-  final String login;
+  final String username;
   final String password;
+  final bool isPasswordObscured;
   final String firstName;
   final String lastName;
   final String email;
@@ -22,8 +24,9 @@ class RegistrationState extends Equatable {
   @override
   List<Object> get props {
     return [
-      login,
+      username,
       password,
+      isPasswordObscured,
       firstName,
       lastName,
       email,
@@ -32,9 +35,27 @@ class RegistrationState extends Equatable {
     ];
   }
 
+  bool get isCredentialsValid {
+    if (username.isEmpty) {
+      return false;
+    }
+    if (AppValidators.passwordValidator(password) != null) {
+      return false;
+    }
+    if (firstName.isEmpty || lastName.isEmpty) {
+      return false;
+    }
+    if (email.isEmpty || !(email.contains('@'))) {
+      return false;
+    }
+
+    return true;
+  }
+
   RegistrationState copyWith({
-    String? login,
+    String? username,
     String? password,
+    bool? isPasswordObscured,
     String? firstName,
     String? lastName,
     String? email,
@@ -42,8 +63,9 @@ class RegistrationState extends Equatable {
     String? message,
   }) {
     return RegistrationState(
-      login: login ?? this.login,
+      username: username ?? this.username,
       password: password ?? this.password,
+      isPasswordObscured: isPasswordObscured ?? this.isPasswordObscured,
       firstName: firstName ?? this.firstName,
       lastName: lastName ?? this.lastName,
       email: email ?? this.email,

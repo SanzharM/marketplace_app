@@ -130,6 +130,36 @@ class S {
     );
   }
 
+  /// `Некорректное имя пользователя`
+  String get incorrectUsername {
+    return Intl.message(
+      'Некорректное имя пользователя',
+      name: 'incorrectUsername',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Минимальная длина пароля - 6 символов`
+  String get incorrectPassword {
+    return Intl.message(
+      'Минимальная длина пароля - 6 символов',
+      name: 'incorrectPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Некорректный e-mail`
+  String get incorrectEmail {
+    return Intl.message(
+      'Некорректный e-mail',
+      name: 'incorrectEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Русский`
   String get russian {
     return Intl.message(
@@ -365,6 +395,106 @@ class S {
     return Intl.message(
       'Регистрация',
       name: 'registration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Логин`
+  String get username {
+    return Intl.message(
+      'Логин',
+      name: 'username',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Пароль`
+  String get password {
+    return Intl.message(
+      'Пароль',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Имя`
+  String get firstName {
+    return Intl.message(
+      'Имя',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Фамилия`
+  String get lastName {
+    return Intl.message(
+      'Фамилия',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `E-mail`
+  String get email {
+    return Intl.message(
+      'E-mail',
+      name: 'email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Нет аккаунта?`
+  String get doesNotHaveAccountYet {
+    return Intl.message(
+      'Нет аккаунта?',
+      name: 'doesNotHaveAccountYet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Есть аккаунт?`
+  String get haveAlreadyAccount {
+    return Intl.message(
+      'Есть аккаунт?',
+      name: 'haveAlreadyAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Как вас зовут?`
+  String get whatIsYourName {
+    return Intl.message(
+      'Как вас зовут?',
+      name: 'whatIsYourName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ваш e-mail, чтобы отправлять вам чеки об оплате`
+  String get yourEmailToSendReceipts {
+    return Intl.message(
+      'Ваш e-mail, чтобы отправлять вам чеки об оплате',
+      name: 'yourEmailToSendReceipts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Данные для авторизации`
+  String get credentialsToFurtherAuthorization {
+    return Intl.message(
+      'Данные для авторизации',
+      name: 'credentialsToFurtherAuthorization',
       desc: '',
       args: [],
     );

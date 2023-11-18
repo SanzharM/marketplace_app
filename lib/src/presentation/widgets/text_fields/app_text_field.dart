@@ -89,32 +89,32 @@ class AppTextField extends StatelessWidget {
           decoration: InputDecoration(
             // BORDERS
             border: withBorder
-                ? const UnderlineInputBorder(
+                ? const OutlineInputBorder(
                     borderSide: BorderSide(color: ColorName.lightGrey),
                   )
                 : InputBorder.none,
             enabledBorder: withBorder
-                ? const UnderlineInputBorder(
+                ? const OutlineInputBorder(
                     borderSide: BorderSide(color: ColorName.lightGrey),
                   )
                 : InputBorder.none,
             disabledBorder: withBorder
-                ? const UnderlineInputBorder(
+                ? const OutlineInputBorder(
                     borderSide: BorderSide(color: ColorName.lightGrey),
                   )
                 : InputBorder.none,
             focusedBorder: withBorder
-                ? UnderlineInputBorder(
+                ? OutlineInputBorder(
                     borderSide: BorderSide(color: context.theme.primaryColor),
                   )
                 : InputBorder.none,
             errorBorder: withBorder
-                ? UnderlineInputBorder(
+                ? OutlineInputBorder(
                     borderSide: BorderSide(color: context.theme.colorScheme.error),
                   )
                 : InputBorder.none,
             focusedErrorBorder: withBorder
-                ? UnderlineInputBorder(
+                ? OutlineInputBorder(
                     borderSide: BorderSide(color: context.theme.colorScheme.error),
                   )
                 : InputBorder.none,
@@ -145,13 +145,19 @@ class AppTextField extends StatelessWidget {
         if (prefixIcon != null) ...[
           Align(
             alignment: Alignment.centerLeft,
-            child: prefixIcon!,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12.w),
+              child: prefixIcon!,
+            ),
           ),
         ],
         if (suffixIcon != null) ...[
           Align(
             alignment: Alignment.centerRight,
-            child: suffixIcon!,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 12.w),
+              child: suffixIcon!,
+            ),
           ),
         ],
       ],

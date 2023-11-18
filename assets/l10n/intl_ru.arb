@@ -8,6 +8,9 @@
     "unableToLoadTheLink": "Не удалось открыть ссылку",
     "listIsEmpty": "Список пуст",
     "incorrectPhone": "Некорректный номер телефона",
+    "incorrectUsername": "Некорректное имя пользователя",
+    "incorrectPassword": "Минимальная длина пароля - 6 символов",
+    "incorrectEmail": "Некорректный e-mail",
     "@_LANGUAGES": {},
     "russian": "Русский",
     "kazakh": "Қазақша",
@@ -35,5 +38,15 @@
     "toLogin": "Войти",
     "needToLoginText": "Войдите в аккаунт, чтобы использовать все возможности приложения",
     "toRegister": "Зарегистрироваться",
-    "registration": "Регистрация"
+    "registration": "Регистрация",
+    "username": "Логин",
+    "password": "Пароль",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "E-mail",
+    "doesNotHaveAccountYet": "Нет аккаунта?",
+    "haveAlreadyAccount": "Есть аккаунт?",
+    "whatIsYourName": "Как вас зовут?",
+    "yourEmailToSendReceipts": "Ваш e-mail, чтобы отправлять вам чеки об оплате",
+    "credentialsToFurtherAuthorization": "Данные для авторизации"
 }
