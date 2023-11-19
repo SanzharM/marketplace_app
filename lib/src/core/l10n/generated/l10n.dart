@@ -499,6 +499,86 @@ class S {
       args: [],
     );
   }
+
+  /// `Язык приложения`
+  String get appLanguage {
+    return Intl.message(
+      'Язык приложения',
+      name: 'appLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Тема приложения`
+  String get appTheme {
+    return Intl.message(
+      'Тема приложения',
+      name: 'appTheme',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `inspired by`
+  String get inspiredBy {
+    return Intl.message(
+      'inspired by',
+      name: 'inspiredBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ссылки`
+  String get references {
+    return Intl.message(
+      'Ссылки',
+      name: 'references',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Системная`
+  String get themeModeSystem {
+    return Intl.message(
+      'Системная',
+      name: 'themeModeSystem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Такая же, как на устройстве`
+  String get sameAsOnTheDevice {
+    return Intl.message(
+      'Такая же, как на устройстве',
+      name: 'sameAsOnTheDevice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Светлая`
+  String get themeModeLight {
+    return Intl.message(
+      'Светлая',
+      name: 'themeModeLight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Темная`
+  String get themeModeDark {
+    return Intl.message(
+      'Темная',
+      name: 'themeModeDark',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -18,7 +18,7 @@ class UserState extends Equatable {
   List<Object> get props => [user, status, message];
 
   UserState copyWith({
-    dynamic user,
+    UserEntity? user,
     StateStatus? status,
     String? message,
   }) {

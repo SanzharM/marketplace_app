@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "appLanguage": MessageLookupByLibrary.simpleMessage("Язык приложения"),
+        "appTheme": MessageLookupByLibrary.simpleMessage("Тема приложения"),
         "authorization": MessageLookupByLibrary.simpleMessage("Авторизация"),
         "back": MessageLookupByLibrary.simpleMessage("Назад"),
         "cancel": MessageLookupByLibrary.simpleMessage("Отмена"),
@@ -47,6 +49,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Некорректный номер телефона"),
         "incorrectUsername": MessageLookupByLibrary.simpleMessage(
             "Некорректное имя пользователя"),
+        "inspiredBy": MessageLookupByLibrary.simpleMessage("inspired by"),
         "kazakh": MessageLookupByLibrary.simpleMessage("Қазақша"),
         "lastName": MessageLookupByLibrary.simpleMessage("Фамилия"),
         "listIsEmpty": MessageLookupByLibrary.simpleMessage("Список пуст"),
@@ -61,13 +64,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
         "payment": MessageLookupByLibrary.simpleMessage("Оплата"),
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+        "references": MessageLookupByLibrary.simpleMessage("Ссылки"),
         "registration": MessageLookupByLibrary.simpleMessage("Регистрация"),
         "russian": MessageLookupByLibrary.simpleMessage("Русский"),
+        "sameAsOnTheDevice":
+            MessageLookupByLibrary.simpleMessage("Такая же, как на устройстве"),
         "sessionExpired":
             MessageLookupByLibrary.simpleMessage("Время сессия истекло"),
         "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
         "somethingWentWrong":
             MessageLookupByLibrary.simpleMessage("Что-то пошло не так"),
+        "themeModeDark": MessageLookupByLibrary.simpleMessage("Темная"),
+        "themeModeLight": MessageLookupByLibrary.simpleMessage("Светлая"),
+        "themeModeSystem": MessageLookupByLibrary.simpleMessage("Системная"),
         "toCancel": MessageLookupByLibrary.simpleMessage("Отменить"),
         "toContinue": MessageLookupByLibrary.simpleMessage("Продолжить"),
         "toLogin": MessageLookupByLibrary.simpleMessage("Войти"),

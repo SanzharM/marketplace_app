@@ -21,7 +21,7 @@ class SessionInterceptor extends InterceptorsWrapper {
 
     final token = await const LocalStorage().getToken();
     if (token?.access?.isNotEmpty ?? false) {
-      options.headers['Authorization'] = token;
+      options.headers['Authorization'] = token!.access!;
     }
 
     final language = await const LocalStorage().getLocale();

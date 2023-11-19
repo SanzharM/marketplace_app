@@ -38,7 +38,8 @@ class AppTheme {
         ),
       ),
       textSelectionTheme: const TextSelectionThemeData(
-        cursorColor: ColorName.black,
+        cursorColor: ColorName.blue,
+        selectionColor: ColorName.blue,
       ),
     );
   }
@@ -46,13 +47,13 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       primaryColor: ColorName.blue,
-      scaffoldBackgroundColor: ColorName.white,
-      hintColor: ColorName.darkGrey,
+      scaffoldBackgroundColor: ColorName.black,
+      hintColor: ColorName.lightGrey,
       colorScheme: const ColorScheme.dark(
         primary: ColorName.blue,
         error: ColorName.red,
-        secondary: ColorName.lightGrey,
-        background: ColorName.white,
+        secondary: ColorName.darkGrey,
+        background: ColorName.black,
       ),
 
       // Text
@@ -61,22 +62,23 @@ class AppTheme {
         color: ColorName.white,
       ),
       appBarTheme: AppBarTheme(
-        backgroundColor: ColorName.white,
+        backgroundColor: ColorName.black,
         centerTitle: true,
         elevation: 0,
-        systemOverlayStyle: SystemUiOverlayStyle.dark,
-        titleTextStyle: AppTextTheme.getTextTheme(color: ColorName.white).headlineMedium,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
+        titleTextStyle: AppTextTheme.getTextTheme(color: ColorName.black).headlineMedium,
       ),
       cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
-        primaryColor: ColorName.black,
-        scaffoldBackgroundColor: ColorName.white,
+        primaryColor: ColorName.white,
+        scaffoldBackgroundColor: ColorName.black,
         textTheme: CupertinoTextThemeData(
           primaryColor: ColorName.white,
           textStyle: AppTextTheme.getTextTheme(color: ColorName.white).bodyLarge,
         ),
       ),
       textSelectionTheme: const TextSelectionThemeData(
-        cursorColor: ColorName.black,
+        cursorColor: ColorName.blue,
+        selectionColor: ColorName.blue,
       ),
     );
   }

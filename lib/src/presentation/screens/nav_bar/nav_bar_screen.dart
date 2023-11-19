@@ -33,19 +33,25 @@ class NavBarScreen extends StatelessWidget {
             onTap: context.read<NavBarBloc>().changeIndex,
             items: <BottomNavigationBarItem>[
               BottomNavigationBarItem(
-                icon: Assets.icons.squares.svg(),
+                icon: Assets.icons.squares.svg(
+                  color: context.theme.iconTheme.color,
+                ),
                 activeIcon: Assets.icons.squaresFilled.svg(
                   color: context.theme.primaryColor,
                 ),
               ),
               BottomNavigationBarItem(
-                icon: Assets.icons.shoppingCart.svg(),
+                icon: Assets.icons.shoppingCart.svg(
+                  color: context.theme.iconTheme.color,
+                ),
                 activeIcon: Assets.icons.shoppingCartFilled.svg(
                   color: context.theme.primaryColor,
                 ),
               ),
               BottomNavigationBarItem(
-                icon: Assets.icons.user.svg(),
+                icon: Assets.icons.user.svg(
+                  color: context.theme.iconTheme.color,
+                ),
                 activeIcon: Assets.icons.userFilled.svg(
                   color: context.theme.primaryColor,
                 ),

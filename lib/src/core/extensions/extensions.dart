@@ -61,6 +61,17 @@ extension XThemeMode on ThemeMode {
   bool get isSystem => this == ThemeMode.system;
   bool get isLight => this == ThemeMode.light;
   bool get isDark => this == ThemeMode.dark;
+
+  String get localizedName {
+    switch (this) {
+      case ThemeMode.system:
+        return L10n.current.themeModeSystem;
+      case ThemeMode.light:
+        return L10n.current.themeModeLight;
+      case ThemeMode.dark:
+        return L10n.current.themeModeDark;
+    }
+  }
 }
 
 extension XResponse on Response {

@@ -58,12 +58,18 @@ class $AssetsIconsGen {
   /// File path: assets/icons/eyeSlash.svg
   SvgGenImage get eyeSlash => const SvgGenImage('assets/icons/eyeSlash.svg');
 
+  /// File path: assets/icons/figma.svg
+  SvgGenImage get figma => const SvgGenImage('assets/icons/figma.svg');
+
   /// File path: assets/icons/flash.svg
   SvgGenImage get flash => const SvgGenImage('assets/icons/flash.svg');
 
   /// File path: assets/icons/flashFilled.svg
   SvgGenImage get flashFilled =>
       const SvgGenImage('assets/icons/flashFilled.svg');
+
+  /// File path: assets/icons/github.svg
+  SvgGenImage get github => const SvgGenImage('assets/icons/github.svg');
 
   /// File path: assets/icons/heart.svg
   SvgGenImage get heart => const SvgGenImage('assets/icons/heart.svg');
@@ -116,6 +122,10 @@ class $AssetsIconsGen {
   /// File path: assets/icons/squaresFilled.svg
   SvgGenImage get squaresFilled =>
       const SvgGenImage('assets/icons/squaresFilled.svg');
+
+  /// File path: assets/icons/technodom.jpg
+  AssetGenImage get technodom =>
+      const AssetGenImage('assets/icons/technodom.jpg');
 
   /// File path: assets/icons/themeMode.png
   AssetGenImage get themeMode =>

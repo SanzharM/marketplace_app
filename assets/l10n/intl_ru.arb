@@ -48,5 +48,14 @@
     "haveAlreadyAccount": "Есть аккаунт?",
     "whatIsYourName": "Как вас зовут?",
     "yourEmailToSendReceipts": "Ваш e-mail, чтобы отправлять вам чеки об оплате",
-    "credentialsToFurtherAuthorization": "Данные для авторизации"
+    "credentialsToFurtherAuthorization": "Данные для авторизации",
+    "@_SETTINGS": {},
+    "appLanguage": "Язык приложения",
+    "appTheme": "Тема приложения",
+    "inspiredBy": "inspired by",
+    "references": "Ссылки",
+    "themeModeSystem": "Системная",
+    "sameAsOnTheDevice": "Такая же, как на устройстве",
+    "themeModeLight": "Светлая",
+    "themeModeDark": "Темная"
 }

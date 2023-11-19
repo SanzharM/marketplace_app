@@ -9,12 +9,14 @@ class SliverBodyWithHeader extends StatelessWidget {
     required this.title,
     this.leading,
     required this.body,
+    this.actions,
   });
 
   final ScrollPhysics? scrollPhysics;
   final String title;
   final Widget? leading;
   final Widget body;
+  final List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class SliverBodyWithHeader extends StatelessWidget {
           expandedHeight: 56.h,
           leading: leading,
           automaticallyImplyLeading: false,
+          actions: actions,
           flexibleSpace: FlexibleSpaceBar(
             centerTitle: false,
             expandedTitleScale: 1.3,

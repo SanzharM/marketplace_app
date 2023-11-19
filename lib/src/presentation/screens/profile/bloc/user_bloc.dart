@@ -4,6 +4,9 @@ import 'package:flutter/foundation.dart';
 import 'package:marketplace_app/src/common/state_status.dart';
 import 'package:marketplace_app/src/core/l10n/l10n_service.dart';
 import 'package:marketplace_app/src/domain/entities/user/user_entity.dart';
+import 'package:marketplace_app/src/domain/usecases/user/get_user_usecase.dart';
+import 'package:marketplace_app/src/domain/usecases/user/logout_usecase.dart';
+import 'package:marketplace_app/src/service_locator.dart';
 
 part 'user_event.dart';
 part 'user_state.dart';
@@ -19,13 +22,29 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<UserLogoutEvent>(_logout);
   }
 
-  // final _getUserUseCase = sl<GetUserUseCase>();
-  // final _logoutUseCase = sl<LogoutUseCase>();
+  final _getUserUseCase = sl<GetUserUseCase>();
+  final _logoutUseCase = sl<LogoutUseCase>();
 
   void _get(
     UserGetEvent event,
     Emitter<UserState> emit,
-  ) async {}
+  ) async {
+    if (state.status.isLoading) return;
+
+    emit(state.copyWith(status: StateStatus.loading));
+
+    final result = await _getUserUseCase.call();
+    result.fold(
+      (failure) => emit(state.copyWith(
+        status: StateStatus.error,
+        message: failure.message,
+      )),
+      (user) => emit(state.copyWith(
+        status: StateStatus.success,
+        user: user,
+      )),
+    );
+  }
 
   void _change(
     UserChangeEvent event,
@@ -42,8 +61,16 @@ class UserBloc extends Bloc<UserEvent, UserState> {
 
     emit(state.copyWith(status: StateStatus.loading));
     try {
-      await Future.delayed(const Duration(seconds: 1));
-      emit(UserLogoutSuccessState.fromState(state));
+      final result = await _logoutUseCase.call();
+      result.fold(
+        (failure) => emit(state.copyWith(
+          status: StateStatus.error,
+          message: failure.message,
+        )),
+        (_) => emit(UserLogoutSuccessState.fromState(
+          state,
+        )),
+      );
     } catch (e) {
       debugPrint('UserLogoutEvent error: $e');
       emit(state.copyWith(

@@ -9,6 +9,7 @@ import 'package:marketplace_app/src/core/flutter_gen/generated/assets.gen.dart';
 import 'package:marketplace_app/src/core/l10n/l10n_service.dart';
 import 'package:marketplace_app/src/core/utils/utils.dart';
 import 'package:marketplace_app/src/presentation/screens/authorization/registration/bloc/registration_bloc.dart';
+import 'package:marketplace_app/src/presentation/screens/profile/bloc/user_bloc.dart';
 import 'package:marketplace_app/src/presentation/widgets/buttons/app_button.dart';
 import 'package:marketplace_app/src/presentation/widgets/buttons/app_text_button.dart';
 import 'package:marketplace_app/src/presentation/widgets/common/custom_app_bar.dart';
@@ -68,6 +69,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
         if (state.status.isSuccess) {
           context.router.pop<void>();
+          context.read<UserBloc>().get();
           return;
         }
       },

@@ -35,7 +35,7 @@ class _$AppRouter extends RootStackRouter {
           buttonTitle: args.buttonTitle,
           onPressed: args.onPressed,
         ),
-        // customRouteBuilder: (context, child, page) => TransitionsBuilders.slideBottom,
+        // customRouteBuilder: TransitionsBuilders.slideBottom,
         opaque: true,
         barrierDismissible: false,
       );
